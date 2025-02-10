@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:podcast/configs/app_icons.dart';
 import 'package:podcast/configs/app_theme.dart';
 import 'package:podcast/configs/app_typography.dart';
 

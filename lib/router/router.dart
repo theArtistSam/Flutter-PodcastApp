@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:podcast/router/routes.dart';
+import 'package:podcast/screens/home/home.dart';
 import 'package:podcast/screens/onboarding/onboarding.dart';
 
 final Map<String, Widget Function(dynamic)> appRoutes = {
@@ -12,6 +13,11 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return FadeRoute(
         settings: settings,
         child: const OnboardingScreen(),
+      );
+    case AppRoutes.home:
+      return FadeRoute(
+        settings: settings,
+        child: const HomeScreen(),
       );
 
     default:

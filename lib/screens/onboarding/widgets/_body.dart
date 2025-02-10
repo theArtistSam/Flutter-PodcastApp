@@ -61,7 +61,10 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  AppButton(title: "Login", onTap: () {}),
+                  AppButton(
+                    title: "Login",
+                    onTap: () => AppRoutes.home.push(context),
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
