@@ -7,12 +7,14 @@ class AppIconButton extends StatelessWidget {
   final String icon;
   final double pH;
   final double pV;
+  final double iH;
   const AppIconButton({
     super.key,
     required this.icon,
     required this.onTap,
     this.pH = 22.0,
     this.pV = 20.0,
+    this.iH = 19.0,
   });
 
   @override
@@ -35,7 +37,10 @@ class AppIconButton extends StatelessWidget {
             vertical: pV,
             horizontal: pH,
           ),
-          child: SvgPicture.asset(icon),
+          child: SvgPicture.asset(
+            icon,
+            height: iH,
+          ),
         ),
       ),
     );

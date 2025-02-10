@@ -18,42 +18,23 @@ class _PodcastCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 191,
-      width: 309,
+      width: double.infinity,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                image,
-                fit: BoxFit.cover,
-              ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              image,
+              height: 190,
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppTheme.orange,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 5,
-                    ),
-                    child: Text(
-                      "NEW",
-                      style: AppTypography.l1m(),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
                 Text(
                   title,
                   style: AppTypography.h2m(),
@@ -97,7 +78,10 @@ class _PodcastCard extends StatelessWidget {
                         Row(
                           children: [
                             ClipOval(
-                              child: Image.asset(AppImages.avatar),
+                              child: Image.asset(
+                                AppImages.avatar,
+                                height: 16,
+                              ),
                             ),
                             const SizedBox(width: 8),
                             Text(

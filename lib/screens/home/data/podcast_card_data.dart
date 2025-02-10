@@ -33,7 +33,7 @@ final List<PodcastCardModel> podcastCardItems = [
   const PodcastCardModel(
     title: "Untold Stories from the Past",
     image: AppImages.musicBg,
-    author: "David Attenborough",
+    author: "David Lane",
     dateCreated: "30.09:2017",
     length: "01:30:15",
   ),

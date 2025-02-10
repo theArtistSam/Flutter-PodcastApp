@@ -9,7 +9,7 @@ class PodcastCardModel {
     required this.title,
     required this.image,
     required this.author,
-    required this.dateCreated,
+    this.dateCreated = "23.05.2019",
     required this.length,
   });
 }
