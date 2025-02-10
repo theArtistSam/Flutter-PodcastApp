@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:podcast/configs/app_icons.dart';
 import 'package:podcast/configs/app_theme.dart';
 import 'package:podcast/configs/app_typography.dart';
 
@@ -16,46 +17,47 @@ class AppTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppTheme.background,
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(
-          color: AppTheme.borderColor,
-          width: 1.5,
+    return TextField(
+      obscureText: isPassword,
+      onChanged: (value) {
+        // print('Text changed: $value');
+      },
+      style: AppTypography.b2(),
+      decoration: InputDecoration(
+        prefixIcon: Padding(
+          padding: const EdgeInsets.only(
+            left: 27,
+            right: 27,
+          ), // Adjust spacing here
+          child: SvgPicture.asset(
+            icon,
+          ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 27),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              icon,
-            ),
-            const SizedBox(
-              width: 28,
-            ),
-            Expanded(
-              child: TextField(
-                obscureText: isPassword,
-                onChanged: (value) {
-                  // print('Text changed: $value');
-                },
-                style: AppTypography.b2(),
-                decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.symmetric(
-                    vertical: 21,
-                  ),
-                  border: InputBorder.none,
-                  hintText: hintText,
-                  hintStyle: AppTypography.b2(
-                    color: AppTheme.textGrey,
-                  ),
-                ),
-              ),
-            ),
-          ],
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 27,
+          vertical: 21,
         ),
+        hintText: hintText,
+        hintStyle: AppTypography.b2(color: AppTheme.textGrey),
+
+        // Border when NOT focused
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: AppTheme.borderColor, width: 1.5),
+        ),
+
+        // Border when focused
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(
+            color: AppTheme.orange,
+            width: 1.5,
+          ),
+        ),
+
+        // Background color
+        filled: true,
+        fillColor: AppTheme.background,
       ),
     );
   }
