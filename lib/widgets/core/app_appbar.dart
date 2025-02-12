@@ -1,7 +1,11 @@
-part of '../home.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:podcast/configs/app_icons.dart';
+import 'package:podcast/configs/app_images.dart';
+import 'package:podcast/configs/app_theme.dart';
 
-class _Appbar extends StatelessWidget implements PreferredSizeWidget {
-  const _Appbar();
+class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
+  const AppAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

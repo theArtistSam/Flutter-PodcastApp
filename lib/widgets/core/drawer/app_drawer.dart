@@ -1,7 +1,7 @@
-part of '../home.dart';
+part of '../../../screens/home/home.dart';
 
-class _Drawer extends StatelessWidget {
-  const _Drawer({super.key});
+class AppDrawer extends StatelessWidget {
+  const AppDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -129,9 +129,21 @@ class _Drawer extends StatelessWidget {
                     item.title,
                     style: AppTypography.b2m(),
                   ),
-                  onTap: item.title == "Browse"
-                      ? () => AppRoutes.browse.push(context)
-                      : null,
+                  onTap: () {
+                    switch (item.title) {
+                      case 'Browse':
+                        if (!AppRoutes.browse.sameRoute()) {
+                          AppRoutes.browse.clearStackAndPush(context);
+                        }
+                        break;
+                      case 'Home':
+                        if (!AppRoutes.home.sameRoute()) {
+                          AppRoutes.home.clearStackAndPush(context);
+                        }
+                        break;
+                      default:
+                    }
+                  },
                 );
               },
             ),

@@ -25,4 +25,5 @@ class AppIcons {
   static const String cross = "${path}cross.svg";
   static const String card = "${path}card.svg";
   static const String shareArrow = "${path}share-arrow.svg";
+  static const String home = "${path}home.svg";
 }

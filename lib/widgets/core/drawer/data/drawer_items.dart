@@ -1,7 +1,11 @@
 import 'package:podcast/configs/app_icons.dart';
-import 'package:podcast/screens/home/models/drawer_item_model.dart';
+import 'package:podcast/widgets/core/drawer/models/drawer_item_model.dart';
 
 List<DrawerItemModel> drawerItems = [
+  const DrawerItemModel(
+    icon: AppIcons.home,
+    title: "Home",
+  ),
   const DrawerItemModel(
     icon: AppIcons.globe,
     title: "Browse",
