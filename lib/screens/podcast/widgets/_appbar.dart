@@ -1,4 +1,4 @@
-part of '../home.dart';
+part of '../podcast.dart';
 
 class _Appbar extends StatelessWidget implements PreferredSizeWidget {
   const _Appbar();
@@ -6,17 +6,14 @@ class _Appbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 0,
-      surfaceTintColor: AppTheme.textGrey,
-      backgroundColor: AppTheme.background, // Customize color
-      automaticallyImplyLeading: false,
-      title: Padding(
-        padding: const EdgeInsets.only(left: 15.0),
-        child: Image.asset(
-          AppImages.appLogo,
-          height: 42,
-        ),
+      surfaceTintColor: Colors.transparent,
+      backgroundColor: Colors.transparent, // Customize color
+      elevation: 0, // Remove shadow
+      leading: IconButton(
+        icon: SvgPicture.asset(AppIcons.arrowLeft),
+        onPressed: () => ''.pop(context),
       ),
+      centerTitle: true, // Centers the text
       actions: [
         IconButton(
           icon: SvgPicture.asset(AppIcons.search),
@@ -25,7 +22,7 @@ class _Appbar extends StatelessWidget implements PreferredSizeWidget {
         const SizedBox(width: 30),
         IconButton(
           icon: SvgPicture.asset(AppIcons.menu),
-          onPressed: () => Scaffold.of(context).openEndDrawer(),
+          onPressed: () {},
         ),
         const SizedBox(width: 15),
       ],

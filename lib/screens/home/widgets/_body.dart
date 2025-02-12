@@ -14,7 +14,8 @@ class _BodyState extends State<_Body> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme.background,
-      appBar: _Appbar(),
+      endDrawer: const _Drawer(),
+      appBar: const _Appbar(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

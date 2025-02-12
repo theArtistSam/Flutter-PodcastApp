@@ -12,6 +12,8 @@ import 'package:podcast/widgets/app_icon_button.dart';
 part 'widgets/_body.dart';
 part 'widgets/_podcast_episode_tile.dart';
 part 'widgets/_slider.dart';
+part 'widgets/_header.dart';
+part 'widgets/_appbar.dart';
 
 class PodcastScreen extends StatelessWidget {
   const PodcastScreen({super.key});

@@ -16,4 +16,13 @@ class AppIcons {
   static const String download = "${path}download.svg";
   static const String soundwave = "${path}sound-wave.svg";
   static const String menuDots = "${path}menu-dots.svg";
+  static const String eye = "${path}eye.svg";
+  static const String globe = "${path}globe.svg";
+  static const String heart = "${path}heart.svg";
+  static const String rotateClock = "${path}rotate-clock.svg";
+  static const String settings = "${path}settings.svg";
+  static const String bell = "${path}bell.svg";
+  static const String cross = "${path}cross.svg";
+  static const String card = "${path}card.svg";
+  static const String shareArrow = "${path}share-arrow.svg";
 }

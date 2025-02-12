@@ -5,131 +5,14 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double w = MediaQuery.sizeOf(context).width;
     return Scaffold(
       backgroundColor: AppTheme.background,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent, // Customize color
-        elevation: 0, // Remove shadow
-        leading: IconButton(
-          icon: SvgPicture.asset(AppIcons.arrowLeft),
-          onPressed: () => ''.pop(context),
-        ),
-        centerTitle: true, // Centers the text
-        actions: [
-          IconButton(
-            icon: SvgPicture.asset(AppIcons.search),
-            onPressed: () {},
-          ),
-          const SizedBox(width: 30),
-          IconButton(
-            icon: SvgPicture.asset(AppIcons.menu),
-            onPressed: () {},
-          ),
-          const SizedBox(width: 15),
-        ],
-      ),
+      appBar: const _Appbar(),
       body: Column(
         children: [
-          Stack(
-            children: [
-              Image.asset(
-                AppImages.musicBg,
-                width: double.infinity,
-                height: 350,
-                fit: BoxFit.cover,
-              ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      AppImages.author1,
-                    ),
-                    Image.asset(
-                      AppImages.author2,
-                    )
-                  ],
-                ),
-              ),
-              SafeArea(
-                child: Center(
-                  child: SizedBox(
-                    width: w * .75,
-                    child: Column(
-                      children: [
-                        Text(
-                          "About flow and our motiations",
-                          textAlign: TextAlign.center,
-                          style: AppTypography.h2m(),
-                        ),
-                        const SizedBox(height: 26),
-                        Text(
-                          "John Doe & Amanda Smith",
-                          style: AppTypography.b2(color: AppTheme.textGrey),
-                        ),
-                        const SizedBox(height: 26),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                AppIcons.rotateBackward,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            AppIconButton(
-                              radius: 50,
-                              iH: 19,
-                              icon: AppIcons.play,
-                              onTap: () {},
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                AppIcons.rotateForward,
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
-          // * Rest of the body starts from here
-          // Slider
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 15,
-            ),
-            child: SliderTheme(
-              data: SliderTheme.of(context).copyWith(
-                trackHeight: 3,
-                activeTrackColor: AppTheme.orange,
-                inactiveTrackColor: AppTheme.borderColor,
-                thumbColor: Colors.white,
-                overlayColor: AppTheme.orange,
-                thumbShape: const RoundSliderThumbShape(
-                  enabledThumbRadius: 8,
-                ),
-              ),
-              child: Slider(value: .5, onChanged: (onChanged) {}),
-            ),
-          ),
+          const _Header(),
+          const _Slider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 33),
             child: Column(
@@ -187,7 +70,6 @@ class _Body extends StatelessWidget {
               ],
             ),
           ),
-
           Expanded(
             child: ListView(
               padding: const EdgeInsets.only(top: 25),

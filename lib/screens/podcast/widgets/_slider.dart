@@ -19,7 +19,13 @@ class _Slider extends StatelessWidget {
             enabledThumbRadius: 8,
           ),
         ),
-        child: Slider(value: .5, onChanged: onChanged),
+        child: SizedBox(
+          width: double.infinity,
+          child: Slider(
+            value: 0.5,
+            onChanged: onChanged ?? (value) {},
+          ),
+        ),
       ),
     );
   }
