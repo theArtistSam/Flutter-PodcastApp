@@ -78,10 +78,7 @@ class _PodcastTile extends StatelessWidget {
                   ],
                 ),
                 AppIconButton(
-                  pV: 10,
-                  pH: 11,
-                  iH: 12,
-                  icon: AppIcons.play,
+                  icon: AppIcons.pause,
                   onTap: () {},
                 )
               ],

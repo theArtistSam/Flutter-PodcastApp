@@ -1,4 +1,4 @@
-part of '../onboarding.dart';
+part of '../login.dart';
 
 class _Body extends StatelessWidget {
   const _Body();

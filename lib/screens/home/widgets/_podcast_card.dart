@@ -93,7 +93,9 @@ class _PodcastCard extends StatelessWidget {
                       ],
                     ),
                     AppIconButton(
-                      icon: AppIcons.play,
+                      radius: 51,
+                      iH: 19,
+                      icon: AppIcons.pause,
                       onTap: () {},
                     )
                   ],

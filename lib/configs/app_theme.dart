@@ -6,6 +6,8 @@ class AppTheme {
   static const Color accent = Color(0xff28282D);
   static const Color textWhite = Color(0xffffffff);
   static const Color textGrey = Color(0xff898F97);
+  static const Color green = Color(0xff459221);
+  static Color greenAccent = const Color(0xff459221).withOpacity(.15);
   static const Color orange = Color(0xffffb433);
-  static Color orangeShadow = const Color(0xffffb433).withOpacity(.5);
+  static Color orangeAccent = const Color(0xffffb433).withOpacity(.5);
 }

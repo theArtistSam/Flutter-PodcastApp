@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         ...observers,
         NavigationHistoryObserver(),
       ],
-      initialRoute: AppRoutes.onboarding,
+      initialRoute: AppRoutes.login,
       builder: (context, child) {
         return child!;
       },

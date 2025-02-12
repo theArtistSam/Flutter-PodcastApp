@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:podcast/router/routes.dart';
 import 'package:podcast/screens/home/home.dart';
-import 'package:podcast/screens/onboarding/onboarding.dart';
+import 'package:podcast/screens/onboarding/login.dart';
+import 'package:podcast/screens/podcast/podcast.dart';
 
 final Map<String, Widget Function(dynamic)> appRoutes = {
-  AppRoutes.onboarding: (_) => const OnboardingScreen(),
+  AppRoutes.login: (_) => const LoginScreen(),
+  AppRoutes.home: (_) => const HomeScreen(),
+  AppRoutes.podcast: (_) => const PodcastScreen(),
 };
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
-    case AppRoutes.onboarding:
+    case AppRoutes.login:
       return FadeRoute(
         settings: settings,
-        child: const OnboardingScreen(),
+        child: const LoginScreen(),
       );
     case AppRoutes.home:
       return FadeRoute(
         settings: settings,
         child: const HomeScreen(),
+      );
+    case AppRoutes.podcast:
+      return FadeRoute(
+        settings: settings,
+        child: const PodcastScreen(),
       );
 
     default:

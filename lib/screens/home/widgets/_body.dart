@@ -74,15 +74,18 @@ class _BodyState extends State<_Body> {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final PodcastCardModel item = podcastCardItems[index];
-                  return _PodcastTile(
-                    title: item.title,
-                    image: item.image,
-                    author: item.author,
-                    length: item.length,
+                  return GestureDetector(
+                    onTap: () => AppRoutes.podcast.push(context),
+                    child: _PodcastTile(
+                      title: item.title,
+                      image: item.image,
+                      author: item.author,
+                      length: item.length,
+                    ),
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return const SizedBox(width: 24);
+                  return const SizedBox(width: 20);
                 },
                 itemCount: 5,
               ),

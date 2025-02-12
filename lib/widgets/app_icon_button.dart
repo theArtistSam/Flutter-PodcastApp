@@ -5,16 +5,22 @@ import 'package:podcast/configs/app_theme.dart';
 class AppIconButton extends StatelessWidget {
   final VoidCallback onTap;
   final String icon;
-  final double pH;
-  final double pV;
+  final Color color;
+  final double radius;
   final double iH;
+  final Color iC;
+  final bool isShadow;
+  final bool isBordered;
   const AppIconButton({
     super.key,
     required this.icon,
     required this.onTap,
-    this.pH = 22.0,
-    this.pV = 20.0,
-    this.iH = 19.0,
+    this.radius = 32,
+    this.iH = 12,
+    this.iC = Colors.white,
+    this.isShadow = true,
+    this.isBordered = false,
+    this.color = AppTheme.orange,
   });
 
   @override
@@ -22,25 +28,27 @@ class AppIconButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        width: radius,
+        height: radius,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
-            color: AppTheme.orange,
-            borderRadius: BorderRadius.circular(55),
-            boxShadow: [
-              BoxShadow(
-                color: AppTheme.orangeShadow,
-                spreadRadius: 0,
-                blurRadius: 50,
-              )
-            ]),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: pV,
-            horizontal: pH,
-          ),
-          child: SvgPicture.asset(
-            icon,
-            height: iH,
-          ),
+          color: color,
+          borderRadius: BorderRadius.circular(100),
+          border: isBordered ? Border.all(color: AppTheme.borderColor) : null,
+          boxShadow: isShadow
+              ? [
+                  BoxShadow(
+                    color: AppTheme.orangeAccent,
+                    spreadRadius: 0,
+                    blurRadius: 50,
+                  )
+                ]
+              : null,
+        ),
+        child: SvgPicture.asset(
+          icon,
+          color: iC,
+          height: iH,
         ),
       ),
     );
