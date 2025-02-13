@@ -26,4 +26,9 @@ class AppIcons {
   static const String card = "${path}card.svg";
   static const String shareArrow = "${path}share-arrow.svg";
   static const String home = "${path}home.svg";
+  static const String smile = "${path}smile.svg";
+  static const String stack = "${path}stack.svg";
+  static const String musicTiles = "${path}music-tiles.svg";
+  static const String mic = "${path}mic.svg";
+  static const String profile = "${path}profile.svg";
 }
