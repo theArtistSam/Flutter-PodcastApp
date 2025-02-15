@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:podcast/configs/app_images.dart';
-import 'package:podcast/screens/browse/widgets/models/author_tile_model.dart';
+import 'package:podcast/screens/browse/widgets/authors/model/author_tile_model.dart';
 
 List<AuthorTileModel> authors = [
   const AuthorTileModel(

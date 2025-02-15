@@ -60,6 +60,8 @@ class _BodyState extends State<_Body> {
             0 => const _CategorySection(),
             1 => const _TopicSection(),
             2 => const _AuthorSection(),
+            3 => const _PodcastSection(),
+            4 => const _EpisodeSection(),
             _ => const SizedBox.shrink(),
           }
         ],

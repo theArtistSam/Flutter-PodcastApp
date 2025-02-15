@@ -132,7 +132,7 @@ class _Body extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final PodcastEpisodeModel item =
                               podcastEpisodes[index];
-                          return _PodcastEpisodeTile(
+                          return PodcastEpisodeTile(
                             title: item.title,
                             dateCreated: item.dateCreated,
                             duration: item.duration,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:podcast/screens/browse/widgets/models/category_tile_model.dart';
+import 'package:podcast/screens/browse/widgets/categories/model/category_tile_model.dart';
 
 List<CategoryTileModel> categoryTileItems = [
   CategoryTileModel(

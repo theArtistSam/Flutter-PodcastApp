@@ -1,4 +1,4 @@
-import 'package:podcast/screens/browse/widgets/models/topic_tile_model.dart';
+import 'package:podcast/screens/browse/widgets/topics/model/topic_tile_model.dart';
 
 List<TopicTileModel> topicTileData = [
   const TopicTileModel(

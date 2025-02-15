@@ -1,13 +1,20 @@
-part of '../home.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:podcast/configs/app_icons.dart';
+import 'package:podcast/configs/app_images.dart';
+import 'package:podcast/configs/app_theme.dart';
+import 'package:podcast/configs/app_typography.dart';
+import 'package:podcast/widgets/core/app_icon_button.dart';
 
-class _PodcastCard extends StatelessWidget {
+class PodcastCard extends StatelessWidget {
   final String title;
   final String image;
   final String author;
   final String dateCreated;
   final String length;
 
-  const _PodcastCard({
+  const PodcastCard({
+    super.key,
     required this.title,
     required this.image,
     required this.author,
@@ -18,6 +25,7 @@ class _PodcastCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 190,
       width: double.infinity,
       child: Stack(
         children: [
@@ -25,7 +33,6 @@ class _PodcastCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Image.asset(
               image,
-              height: 190,
               width: double.infinity,
               fit: BoxFit.cover,
             ),

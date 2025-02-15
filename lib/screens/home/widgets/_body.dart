@@ -35,7 +35,7 @@ class _BodyState extends State<_Body> {
                   builder: (BuildContext context) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                      child: _PodcastCard(
+                      child: PodcastCard(
                         title: item.title,
                         image: item.image,
                         author: item.author,

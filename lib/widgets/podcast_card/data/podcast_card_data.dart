@@ -1,5 +1,5 @@
 import 'package:podcast/configs/app_images.dart';
-import 'package:podcast/screens/home/models/podcast_card_model.dart';
+import 'package:podcast/widgets/podcast_card/model/podcast_card_model.dart';
 
 final List<PodcastCardModel> podcastCardItems = [
   const PodcastCardModel(
