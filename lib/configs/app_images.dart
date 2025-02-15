@@ -10,4 +10,5 @@ class AppImages {
   static const String authorImg1 = "${path}author-img-1.png";
   static const String authorImg2 = "${path}author-img-2.png";
   static const String authorImg3 = "${path}author-img-3.png";
+  static const String topicBg = "${path}topic-bg.png";
 }

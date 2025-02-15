@@ -24,6 +24,7 @@ class _PodcastAuthorTile extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 15.0),
         child: Column(
+          spacing: 6,
           children: [
             ClipOval(
               child: Image.asset(

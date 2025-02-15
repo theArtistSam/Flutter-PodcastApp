@@ -31,4 +31,11 @@ class AppIcons {
   static const String musicTiles = "${path}music-tiles.svg";
   static const String mic = "${path}mic.svg";
   static const String profile = "${path}profile.svg";
+  static const String twitter = "${path}twitter.svg";
+  static const String facebook = "${path}facebook.svg";
+  static const String instagram = "${path}instagram.svg";
+  static const String star = "${path}star.svg";
+  static const String starFilled = "${path}star-filled.svg";
+  static const String starHalf = "${path}star-half.svg";
+  static const String smallArrowDown = "${path}small-arrow-down.svg";
 }

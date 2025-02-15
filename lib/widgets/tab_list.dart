@@ -1,14 +1,16 @@
-part of '../home.dart';
+part of '../screens/home/home.dart';
 
-class _TablistView extends StatelessWidget {
+class TabList extends StatelessWidget {
   final Function(int index) onPressed;
   final List<String> items;
   final int selectedIndex;
-  const _TablistView({
-    required this.items,
-    required this.onPressed,
-    required this.selectedIndex,
-  });
+  final double? padding;
+  const TabList(
+      {super.key,
+      required this.items,
+      required this.onPressed,
+      required this.selectedIndex,
+      this.padding});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class _TablistView extends StatelessWidget {
       height: 20,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 33),
+        padding: EdgeInsets.symmetric(horizontal: padding ?? 33),
         itemCount: items.length,
         separatorBuilder: (context, index) {
           return const SizedBox(width: 24);

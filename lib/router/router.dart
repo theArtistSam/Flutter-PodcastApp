@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:podcast/router/routes.dart';
+import 'package:podcast/screens/author/author.dart';
 import 'package:podcast/screens/browse/browse.dart';
 import 'package:podcast/screens/home/home.dart';
 import 'package:podcast/screens/login/login.dart';
 import 'package:podcast/screens/podcast/podcast.dart';
+import 'package:podcast/screens/topic/topic.dart';
 
 final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.login: (_) => const LoginScreen(),
   AppRoutes.home: (_) => const HomeScreen(),
   AppRoutes.podcast: (_) => const PodcastScreen(),
   AppRoutes.browse: (_) => const BrowseScreen(),
+  AppRoutes.topic: (_) => const TopicScreen(),
+  AppRoutes.author: (_) => const AuthorScreen(),
 };
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
@@ -33,6 +37,16 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return FadeRoute(
         settings: settings,
         child: const BrowseScreen(),
+      );
+    case AppRoutes.topic:
+      return FadeRoute(
+        settings: settings,
+        child: const TopicScreen(),
+      );
+    case AppRoutes.author:
+      return FadeRoute(
+        settings: settings,
+        child: const AuthorScreen(),
       );
 
     default:

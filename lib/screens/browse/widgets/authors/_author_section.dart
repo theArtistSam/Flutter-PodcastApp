@@ -28,12 +28,15 @@ class _AuthorSection extends StatelessWidget {
               final AuthorTileModel author = authors[index];
               return Align(
                 heightFactor: .75,
-                child: _AuthorTile(
-                  name: author.name,
-                  totalPodcasts: author.totalPodcasts,
-                  totalMinutes: author.totalMinutes,
-                  img: author.img,
-                  color: author.color,
+                child: GestureDetector(
+                  onTap: () => AppRoutes.author.push(context),
+                  child: _AuthorTile(
+                    name: author.name,
+                    totalPodcasts: author.totalPodcasts,
+                    totalMinutes: author.totalMinutes,
+                    img: author.img,
+                    color: author.color,
+                  ),
                 ),
               );
             },

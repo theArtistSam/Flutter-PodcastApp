@@ -8,7 +8,10 @@ class _Body extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppTheme.background,
       extendBodyBehindAppBar: true,
-      appBar: const _Appbar(),
+      appBar: const AppAppbar(
+        appbarColor: Colors.transparent,
+        isBack: true,
+      ),
       body: Column(
         children: [
           const _Header(),

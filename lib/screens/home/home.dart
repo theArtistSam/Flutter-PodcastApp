@@ -10,7 +10,6 @@ import 'package:podcast/router/routes.dart';
 import 'package:podcast/screens/home/data/podcast_authors_data.dart';
 import 'package:podcast/widgets/podcast_card/_podcast_card.dart';
 import 'package:podcast/widgets/podcast_card/data/podcast_card_data.dart';
-import 'package:podcast/screens/home/data/podcast_data.dart';
 import 'package:podcast/screens/home/models/podcast_author_model.dart';
 import 'package:podcast/widgets/podcast_card/model/podcast_card_model.dart';
 import 'package:podcast/widgets/core/app_appbar.dart';
@@ -20,7 +19,7 @@ import 'package:podcast/widgets/core/drawer/models/drawer_item_model.dart';
 
 part 'widgets/_body.dart';
 part 'widgets/_podcast_tile.dart';
-part 'widgets/_tab_listview.dart';
+part '../../widgets/tab_list.dart';
 part 'widgets/_podcast_author_tile.dart';
 part '../../widgets/core/drawer/app_drawer.dart';
 

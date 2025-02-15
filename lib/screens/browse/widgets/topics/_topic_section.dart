@@ -26,11 +26,14 @@ class _TopicSection extends StatelessWidget {
             },
             itemBuilder: (context, index) {
               final TopicTileModel item = topicTileData[index];
-              return _TopicTile(
-                title: item.title,
-                totalAuthors: item.totalAuthors,
-                totalPodcasts: item.totalPodcasts,
-                totalMinutes: item.totalMinutes,
+              return GestureDetector(
+                onTap: () => AppRoutes.topic.push(context),
+                child: _TopicTile(
+                  title: item.title,
+                  totalAuthors: item.totalAuthors,
+                  totalPodcasts: item.totalPodcasts,
+                  totalMinutes: item.totalMinutes,
+                ),
               );
             },
           ),

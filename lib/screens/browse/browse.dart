@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:podcast/configs/_string_ext.dart';
 import 'package:podcast/configs/app_icons.dart';
 import 'package:podcast/configs/app_images.dart';
 import 'package:podcast/configs/app_theme.dart';
 import 'package:podcast/configs/app_typography.dart';
+import 'package:podcast/router/routes.dart';
 import 'package:podcast/screens/browse/widgets/authors/data/author_tile_data.dart';
 import 'package:podcast/screens/browse/widgets/data/category_data.dart';
 import 'package:podcast/screens/browse/widgets/categories/data/category_tile_data.dart';

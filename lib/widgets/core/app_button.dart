@@ -6,11 +6,13 @@ class AppButton extends StatelessWidget {
   final String title;
   final bool isBordered;
   final VoidCallback onTap;
+  final double? width;
   const AppButton({
     super.key,
     this.isBordered = false,
     required this.title,
     required this.onTap,
+    this.width,
   });
 
   @override
@@ -19,7 +21,7 @@ class AppButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        width: double.infinity,
+        width: width ?? double.infinity,
         decoration: decoration(),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),

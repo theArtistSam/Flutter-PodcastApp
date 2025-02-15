@@ -56,8 +56,8 @@ class _BodyState extends State<_Body> {
               ),
             ),
             const SizedBox(height: 24),
-            _TablistView(
-              items: podcastItems,
+            TabList(
+              items: const ["Recent", "Topics", "Authors", "Episodes"],
               onPressed: (index) {
                 setState(() {
                   itemsIndex = index;
@@ -99,8 +99,8 @@ class _BodyState extends State<_Body> {
               ),
             ),
             const SizedBox(height: 24),
-            _TablistView(
-              items: authorsData,
+            TabList(
+              items: const ["Recent", "Most Podcasts", "Most followed"],
               onPressed: (index) {
                 setState(() {
                   authorsIndex = index;
@@ -109,7 +109,7 @@ class _BodyState extends State<_Body> {
               selectedIndex: authorsIndex,
             ),
             SizedBox(
-              height: 208,
+              height: 220,
               child: ListView.separated(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 33,

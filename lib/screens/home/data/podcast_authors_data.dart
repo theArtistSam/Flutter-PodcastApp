@@ -1,12 +1,6 @@
 import 'package:podcast/configs/app_images.dart';
 import 'package:podcast/screens/home/models/podcast_author_model.dart';
 
-List<String> authorsData = [
-  "Recent",
-  "Most Podcasts",
-  "Most followed",
-];
-
 final List<PodcastAuthorModel> podcastAuthors = [
   PodcastAuthorModel(
     image: AppImages.avatar,
